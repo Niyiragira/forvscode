@@ -1,0 +1,55 @@
+    
+        header{
+            color:red;
+            size:1000 ;
+            font-family:monospace;
+            background-color:#2238b3;
+        }
+        body{
+            background-image:url(https://png.pngtree.com/thumb_back/fw800/back_our/20190623/ourmid/pngtree-blue-geometric-business-minimalistic-business-card-background-image_237858.jpg);
+            height: 500 ;
+            background-attachment:fixed;
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size: cover;
+            font-size: 30px;
+            font-family: FAMILY_NAME,Oswald;
+         }
+         .login-page{
+             width:360px;
+             padding :10% 0 0;
+             margin :auto;
+         }
+         .form{
+             position :relative;
+             z-index:1;
+             background:#ffffff;
+             max-width: 360px;
+             margin:0 auto 100 px;
+             padding:45px;
+             text-align:center;
+         }
+         .form input{
+             font-family:"Roboto",sans-serif;
+            outline :1;
+            background:#f2f2f2;
+            width:100%;
+            border:0;
+            margin:0 0 15px;  
+            padding:15px;
+            box-sizing:border-box;
+            font-size:14 px;
+            
+         }
+         .form-button{
+             font-family:"Roboto",sans-serif;
+             text-transform:uppercase;
+             outline:0;
+             background:#4CAF50;
+             width:100%;
+             border:0;
+             padding:15px;
+             color:#FFFFFF;
+            font-size:14px;
+            cursor:pointer;
+         }
