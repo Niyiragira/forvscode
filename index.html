@@ -1,86 +1,78 @@
-<!DOCTYPE>
-<html>
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Open_Sans" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
-    <style>
-     header{
-            color:red;
-            size:1000 ;
-            font-family:monospace;
-            background-color:#2238b3;
-        }
-        body{
-            background-image:url(https://png.pngtree.com/thumb_back/fw800/back_our/20190623/ourmid/pngtree-blue-geometric-business-minimalistic-business-card-background-image_237858.jpg);
-            height: 500 ;
-            background-attachment:fixed;
-            background-position:center;
-            background-repeat:no-repeat;
-            background-size: cover;
-            font-size: 30px;
-            font-family: FAMILY_NAME,Oswald;
-         }
-         .login-page{
-             width:360px;
-             padding :10% 0 0;
-             margin :auto;
-         }
-         .form{
-             position :relative;
-             z-index:1;
-             background:#ffffff;
-             max-width: 360px;
-             margin:0 auto 100 px;
-             padding:45px;
-             text-align:center;
-         }
-         .form input{
-             font-family:"Roboto",sans-serif;
-            outline :1;
-            background:#f2f2f2;
-            width:100%;
-            border:0;
-            margin:0 0 15px;  
-            padding:15px;
-            box-sizing:border-box;
-            font-size:14 px;
-            
-         }
-         .form-button{
-             font-family:"Roboto",sans-serif;
-             text-transform:uppercase;
-             outline:0;
-             background:#4CAF50;
-             width:100%;
-             border:0;
-             padding:15px;
-             color:#FFFFFF;
-            font-size:14px;
-            cursor:pointer;
-         }
-    
-    </style>
-    <head>
-        <title>Login and registration form</title>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Open_Sans" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
-    
+<html>   
+   <head>
+      <title>Form Validation</title>      
+      <script type = "text/javascript">
+        
+      </script>      
+   </head>
+   
    <body>
-        <div class ="login page">
-        <div class ="form">    
-            <form class="register-form">
-            <input type="text" placeholder="example@gmail.com">
-            <input type="text" placeholder="Phone number">
-            <input type="text" placeholder="LinkedIn">
-            <button class="form-button" type="submit">Submit</button>
-          </form>
-        </div>  
-        </div>
-    </p5>
-    </body>
+      <form action = "/cgi-bin/test.cgi" name = "myForm" onsubmit = "return(validate());" style="background-image:url(https://png.pngtree.com/thumb_back/fw800/back_our/20190623/ourmid/pngtree-blue-geometric-business-minimalistic-business-card-background-image_237858.jpg);">
+         <table cellspacing = "2" cellpadding = "2" border = "1">
+            
+            <tr>
+               <td align = "right">Name</td>
+               <td><input type = "text" name = "Name" /></td>
+            </tr>
+            
+            <tr>
+               <td align = "right">EMail</td>
+               <td><input type = "text" name = "EMail" /></td>
+            </tr>
+            
+            <tr>
+               <td align = "right">Zip Code</td>
+               <td><input type = "text" name = "Zip" /></td>
+            </tr>
+            
+            <tr>
+               <td align = "right">Country</td>
+               <td>
+                  <select name = "Country">
+                     <option value = "-1" selected>[choose yours]</option>
+                     <option value = "1">USA</option>
+                     <option value = "2">UK</option>
+                     <option value = "3">INDIA</option>
+                  </select>
+               </td>
+            </tr>
+            
+            <tr>
+               <td align = "right"></td>
+               <td><input type = "submit" value = "Submit" /></td>
+            </tr>
+            
+         </table>
+      </form>   
+      <script type = "text/javascript">
+    
+           // Form validation code will come here.
+           function validate() {
+           
+              if( document.myForm.Name.value == "" ) {
+                 alert( "Please provide your name!" );
+                 document.myForm.Name.focus() ;
+                 return false;
+              }
+              if( document.myForm.EMail.value == "" ) {
+                 alert( "Please provide your Email!" );
+                 document.myForm.EMail.focus() ;
+                 return false;
+              }
+              if( document.myForm.Zip.value == "" || isNaN( document.myForm.Zip.value ) ||
+                 document.myForm.Zip.value.length != 5 ) {
+                 
+                 alert( "Please provide a zip in the format #####." );
+                 document.myForm.Zip.focus() ;
+                 return false;
+              }
+              if( document.myForm.Country.value == "-1" ) {
+                 alert( "Please provide your country!" );
+                 return false;
+              }
+              return( true );
+           }
+        
+        </script>   
+   </body>
 </html>
