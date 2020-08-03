@@ -1,42 +1,138 @@
-<!DOCTYPE>
-<html>
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Open_Sans" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
-    <style>
-        
-        header{
-    color:red;
-    size:1000 ;
-    font-family:monospace;
-    background-color:#2238b3;
-}
-body{
-    background-image:url(https://png.pngtree.com/thumb_back/fw800/back_our/20190623/ourmid/pngtree-blue-geometric-business-minimalistic-business-card-background-image_237858.jpg);
-    height: 500 ;
-    background-attachment:fixed;
-    background-position:center;
-    background-repeat:no-repeat;
-    background-size: cover;
-    font-size: 50px;
-    font-family: FAMILY_NAME,Oswald;
-    
-}
-
-    
-    </style>
-    <h6 id="contacts">Contact me</h6>
-    <p5>
-        <form>Email<br>
-            <input type="text" placeholder="example@gmail.com"><br>
-            Telephone<br>
-            <input type="text" placeholder="number"><br>
-            LinkedIn<br>
-            <input type="text" placeholder="LinkedIn"><br><br>
-
+<html>  
+   <style>
+          
+          header{
+            color:red;
+            size:1000 ;
+            font-family:monospace;
+            background-color:#2238b3;
+        }
+        body{
+            background-image:url(https://png.pngtree.com/thumb_back/fw800/back_our/20190623/ourmid/pngtree-blue-geometric-business-minimalistic-business-card-background-image_237858.jpg);
+            height: 500 ;
+            background-attachment:fixed;
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size: cover;
+            font-size: 30px;
+            font-family: FAMILY_NAME,Oswald;
+         }
+         .login-page{
+             width:360px;
+             padding :10% 0 0;
+             margin :auto;
+         }
+         .form{
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+             position :relative;
+             z-index:1;
+             background:#ffffff;
+             max-width: 360px;
+             margin:0 auto 100 px;
+             padding:45px;
+             text-align:center;
+         }
+         .form input{
+             font-family:"Roboto",sans-serif;
+            outline :1;
+            background:#f2f2f2;
+            width:100%;
+            border:0;
+            margin:0 0 15px;  
+            padding:15px;
+            box-sizing:border-box;
+            font-size:14 px;
             
-            <button type="submit">Submit</button>
-          </form>
-    </p5>
+         }
+         .form-button{
+             font-family:"Oswald",sans-serif;
+             text-transform:uppercase;
+             outline:0;
+             background:#55b858;
+             width:100%;
+             border:0;
+             padding:15px;
+             color:black;
+            font-size:20px;
+            cursor:pointer;
+         }
+   </style> 
+   <head>
+      <title>Contact me</title>      
+      <script type = "text/javascript">
+        
+      </script>      
+   </head>
+   
+   <body>
+      <form class="form" action = "/cgi-bin/test.cgi" name = "myForm" onsubmit = "return(validate());">
+         <table cellspacing = "2" cellpadding = "2" border = "1">
+            
+            <tr>
+               <td align = "right">Name</td>
+               <td><input type = "text" name = "Name" /></td>
+            </tr>
+            
+            <tr>
+               <td align = "right">Email</td>
+               <td><input type = "text" name = "EMail" /></td>
+            </tr>
+            
+            <tr>
+               <td align = "right">Passcode</td>
+               <td><input type = "password" name = "Zip" /></td>
+            </tr>
+            
+            <tr>
+               <td align = "right">Country</td>
+               <td>
+                  <select name = "Country">
+                     <option value = "-1" selected>[choose yours]</option>
+                     <option value = "1">Rwanda</option>
+                     <option value = "2">Burundi</option>
+                     <option value = "3">Uganda</option>
+                  </select>
+               </td>
+            </tr>
+            
+            <tr>
+               <td align = "right"></td>
+               <td><input type = "submit" value = "Submit" class="form-button"/></td>
+            </tr>
+            
+         </table>
+      </form>   
+      <script type = "text/javascript">
+    
+           // Form validation code will come here.
+           function validate() {
+           
+              if( document.myForm.Name.value == "" ) {
+                 alert( "Please provide your name!" );
+                 document.myForm.Name.focus() ;
+                 return false;
+              }
+              if( document.myForm.EMail.value == "" ) {
+                 alert( "Please provide your Email!" );
+                 document.myForm.EMail.focus() ;
+                 return false;
+              }
+              if( document.myForm.Zip.value == "" || isNaN( document.myForm.Zip.value ) ||
+                 document.myForm.Zip.value.length != 5 ) {
+                 
+                 alert( "Please provide a passcode of only numbers in the format *****." );
+                 document.myForm.Zip.focus() ;
+                 return false;
+              }
+              if( document.myForm.Country.value == "-1" ) {
+                 alert( "Please provide your country!" );
+                 return false;
+              }
+              return( true );
+           }
+        
+        </script>   
+   </body>
 </html>
