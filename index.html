@@ -1,5 +1,12 @@
 <html>  
    <style>
+      h6{
+            color:Black;
+            font-size:36px; ;
+            font-family:Oswald;
+            background-color:white;
+            
+            }
           
           header{
             color:red;
@@ -23,7 +30,7 @@
              margin :auto;
          }
          .form{
-            display: inline-block;
+            
             margin-left: auto;
             margin-right: auto;
              position :relative;
@@ -60,29 +67,33 @@
          }
    </style> 
    <head>
-      <title>Contact me</title>      
+      <title>Sign up</title>  
+      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>   
+         
       <script type = "text/javascript">
         
       </script>      
    </head>
    
+   
    <body>
-      <form class="form" action = "/cgi-bin/test.cgi" name = "myForm" onsubmit = "return(validate());">
+      <form class="form" action = "main.html"  name = "myForm" onsubmit = "return(validate());" id="contactForm" action = "main.html">
+         <h6 >Sign Up</h6>
          <table cellspacing = "2" cellpadding = "2" border = "1">
             
             <tr>
                <td align = "right">Name</td>
-               <td><input type = "text" name = "Name" /></td>
+               <td><input type = "text" name = "Name" id="name" /></td>
             </tr>
             
             <tr>
                <td align = "right">Email</td>
-               <td><input type = "text" name = "EMail" /></td>
+               <td><input type = "text" name = "EMail" id="email" /></td>
             </tr>
             
             <tr>
                <td align = "right">Passcode</td>
-               <td><input type = "password" name = "Zip" /></td>
+               <td><input type = "password" name = "Zip" id="passcode" /></td>
             </tr>
             
             <tr>
@@ -99,7 +110,7 @@
             
             <tr>
                <td align = "right"></td>
-               <td><input type = "submit" value = "Submit" class="form-button"/></td>
+               <td><input style="background-color:#55b858" type = "submit" value = "submit" class="form-button"/></td>
             </tr>
             
          </table>
@@ -133,6 +144,11 @@
               return( true );
            }
         
-        </script>   
+        </script> 
+        
+        <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+        
+        <script src="maini.js"></script>
    </body>
 </html>
