@@ -1,0 +1,262 @@
+
+.home{
+    position: absolute;
+width: 65px;
+height: 28px;
+left: 555px;
+top: 24px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+
+color: #FFFFFF
+
+
+}
+.menu{
+    position: absolute;
+    width: 1350px;
+    height: 90px;
+    left: 0px;
+    top: 0px;
+
+    background: #3691B0;
+}
+.about{
+
+    position: absolute;
+width: 64px;
+height: 28px;
+left: 695px;
+top: 24px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+
+color: #FFFFFF;
+
+
+}
+.blog{
+    
+    position: absolute;
+width: 48px;
+height: 28px;
+left: 823px;
+top: 24px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+
+color: #FFFFFF;
+
+
+}
+.contacts{
+
+    position: absolute;
+width: 97px;
+height: 28px;
+left: 913px;
+top: 24px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+
+color: #FFFFFF;
+
+
+}
+.logo{
+    
+position: absolute;
+width: 79px;
+height: 72px;
+left: 23px;
+top: 12px;
+
+
+}
+.signin{
+    
+
+    position: absolute;
+width: 109px;
+height: 42px;
+left: 1058px;
+top: 24px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 42px;
+
+color: white;
+
+}
+.signup{
+    position: absolute;
+width: 82px;
+height: 28px;
+left: 1215px;
+top: 20px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+
+color: #FFFFFF;
+
+}
+
+.head{
+    position: absolute;
+width: 268px;
+height: 42px;
+left: 150px;
+top: 36px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 42px;
+
+color: #FFFFFF;
+
+}
+.hands{
+
+
+position: absolute;
+width: 1350px;
+height: 149px;
+left: 0px;
+top: 84px;
+
+background: url(hands.jpg);
+background-repeat:no-repeat;
+background-size:cover;
+
+}
+.title{
+
+    position: absolute;
+width: 481px;
+height: 131px;
+left: 516px;
+top: 15px;
+
+font-family: Capriola;
+font-style: normal;
+font-weight: normal;
+font-size: 48px;
+line-height: 60px;
+
+color: #000000;
+
+}
+body{
+    background-image:url(logi.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+
+
+.footer{
+
+position: absolute;
+width: 1350px;
+height: 61px;
+left: 0px;
+top: 839px;
+
+background: #221C1C;
+
+}
+.profile{
+
+position: absolute;
+width: 288px;
+height: 480px;
+left: 988px;
+top:300px;
+
+background: url(image.png);
+
+}
+input{
+    background:none;
+    color:white;
+    border-bottom-style: 2px solid #fff;
+             font-family: Arial;
+             width: 300px;
+             height: 37px;
+             text-align: left;
+             font-size: 16px;
+             border-top-style: solid;
+             border-left-style: solid;
+             border-right-style: solid;
+             border-radius: 19px;
+             padding: 4px;
+}
+button {
+    background: rgb(238, 238, 238);
+    color: green;
+    border: 4px blue;
+    border-radius: 16px;
+    font-size: 16px;
+    padding: 7px;
+    width: 150px;
+    font-weight: bold;
+    text-align: center;
+    }
+    button:hover {
+    box-shadow: 2px 3px 6px 3px rgb(73, 25, 136);
+}
+#div2 {
+    height: 540px;
+    background: linear-gradient(rgb(31, 182, 202), rgb(173, 220, 229), rgb(227, 229, 230));
+    width: 706px;
+    border-radius: 5px;
+    box-shadow: 13px 14px 15px white;
+    opacity: 1;
+    margin-top:100px;
+    margin-left:300px;
+    text-align:center;
+  }
+  .h5{
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 3px 4px 5px orange;
+    font-family:myFont;
+  }
+
+  .home:hover{
+    box-shadow: 2px 3px 6px 3px white;
+  }
+  .about:hover{
+    box-shadow: 2px 3px 6px 3px white;
+  }
+  .blog:hover{
+    box-shadow: 2px 3px 6px 3px white;
+  }
+  .contacts:hover{
+    box-shadow: 2px 3px 6px 3px white;
+  }

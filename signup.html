@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Open_Sans" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+</head>
+<body>
+    
+        <div class="menu">
+            <div class="head">Niyiragira Gerard</div>
+            <a href="home.html"><div class="home">Home</div></a>
+            <a href=""><div class="about">About</div></a>
+            <a href="blogger.html"><div class="blog">Blog</div></a>
+            <a href="cntct.html"><div class="contacts">Contact</div></a>
+            <div class="signin"><a href="signin.html"><button>Sign In</button></a></div>
+            <div class="signupbtn"><div class="signup"><a href="signin.html"><button>Sign Up</button></a></div></div>
+            <div class="logo"><img src="logo.jpg" style="width:70px"></div>
+        </div>
+        <div class="footer"></div>
+        <div id="div2">
+            <h5 class="h5">SIGN UP</h5>
+    <form >
+            <input type="text" id="thename" placeholder="Name">
+                        <br><br>
+            <input type="text" id="email" placeholder="Email">
+            <br><br><br>
+            <input type="password" placeholder="Password" name="Password" id="firstPassword" required/>
+            <br />
+            <br />
+            <input type="password" placeholder="Confirm password" name="Password" id="secondPassword" required/>
+            <br><br>
+            <button type="click" onclick="return validateForm()" id="saveButton">SIGN UP</button>
+            <a href="home.html"><button style="color:red">Cancel</button></a>
+            <br />
+            <br />
+            <span>Already have an account?? <a href="signinin.html">Click here</a> to Sign in</span>
+        
+        <br><br>
+        <i style="color: blue">&copy; 2020 | All Rights Reserved</i>
+        </div>
+    </form>
+    
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+    <script src="signupfire.js" ></script>
+</body>
+</html>
