@@ -1,13 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link rel="stylesheet" href="blogger.css">
+    <title>niyiragira-contact</title>
+    <link rel="stylesheet" href="contact.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-
+<link href="https://fonts.googleapis.com/css?family=Open_Sans" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -15,29 +16,32 @@
         <div class="head">Niyiragira Gerard</div>
         <a href="home.html"><div class="home">Home</div></a>
         <a href=""><div class="about">About</div></a>
-        <a href=""><div class="blog">Blog</div></a>
-        <a href="contact.html"><div class="contacts">Contact</div></a>
+        <a href="blogger.html"><div class="blog">Blog</div></a>
+        <a href=""><div class="contacts">Contact</div></a>
         <div class="signin"><a href="signin.html"><button>Sign In</button></a></div>
         <div class="signupbtn"><div class="signup"><a href="signup.html"><button>Sign Up</button></a></div></div>
         <div class="logo"><img src="logo.jpg" style="width:70px"></div>
     </div>
     <div class="footer"></div>
     <div id="div2">
-        <h5 class="h5" id="articleOut">Article</h5>
-    <form >
-        <input type="text" id="title" placeholder="Title">
+        <h5 class="h5">Contact me</h5>
+        <div  class="alert">Thank you! Your message have been received</div>
+    <form id="contactForm">
+        <input type="text" id="thename" placeholder="Name">
                     <br>
+        <input type="text" id="email" placeholder="Email">
+        <br><br><br>
         <textarea style="height:200px; width:700px;" type="text" id="content" placeholder="Your message here......" name="email" required></textarea>
-        <button type="click" id="saveButton">Create</button>
+        <button type="click"  id="saveButton">Send</button>
         <a href="home.html"><button style="color:red">Cancel</button></a>
     </form>
     <br><br>
     <i style="color: blue">&copy; 2020 | All Rights Reserved</i>
     </div>
-
     
+
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
-    <script src="blogfire.js"></script>
+    <script src="contactfire.js"></script>
 </body>
 </html>

@@ -1,20 +1,4 @@
-function validateForm() {
-    var thename = document.getElementById("thename").value;
-    var email=document.getElementById("email").value;
-    if(thename == "") {
-      alert(" Please type your Names");
-      return false;
-    } 
-    if(email.indexOf("@") ==-1 || email==""){
-         alert("You should type an email which contain an @")
-         return false
-     }
-     
-  }
-
-
-
-var firebaseConfig = {
+ var firebaseConfig = {
     apiKey: "AIzaSyDLhtzMjn726JuVFrxLkeSA1Ulxd7Vs7zE",
     authDomain: "new-firebase-pw.firebaseapp.com",
     databaseURL: "https://new-firebase-pw.firebaseio.com",
@@ -28,14 +12,28 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   var db=firebase.firestore();
 
+const form=document.querySelector("#contactForm");
+form.addEventListener("submit",function(e){
+  e.preventDefault();
+ 
+
   const nameOf=document.querySelector("#thename");
-  const email=document.querySelector("#email")
+  const eemail=document.querySelector("#email")
   const content= document.querySelector("#content");
   const save=document.querySelector("#saveButton");
 
-  
-  saveButton.addEventListener("click",function(){
-      const emailToSave=email.value;
+      var thename = document.getElementById("thename").value;
+    var email=document.getElementById("email").value;
+    if(thename == "") {
+      alert(" Please type your Names");
+      return false;
+    } 
+    if(email.indexOf("@") ==-1 || email==""){
+         alert("You should type an email which contain an @")
+         return false
+     }
+
+      const emailToSave=eemail.value;
       const contentToSave=content.value;
       const nameToSave=nameOf.value;
        
@@ -54,5 +52,12 @@ var firebaseConfig = {
       }).catch(function(error){
           console.log("Got an error",error);
       })
-  });
-  
+      document.querySelector(".alert").style.display="block";
+      document.querySelector("#contactForm").reset()
+
+      setTimeout(function(){
+        document.querySelector(".alert").style.display="none";
+      },7000)
+
+});
+

@@ -15,7 +15,6 @@ var firebaseConfig = {
   const outputHeader=document.querySelector("#articleOut")
   const title =document.querySelector("#title");
   const content= document.querySelector("#content");
-  const load=document.querySelector("#loadButton");
   const save=document.querySelector("#saveButton");
 
   saveButton.addEventListener("click",function(){
@@ -34,7 +33,7 @@ var firebaseConfig = {
       })
   });
 
-  loadButton.addEventListener("click",function(){
+  /*loadButton.addEventListener("click",function(){
       db.collection("Blog").get().then(function(doc){
           if(doc && doc.exists){
             const myData=doc.data();  
@@ -43,4 +42,4 @@ var firebaseConfig = {
       }).catch(function(error){
         console.log("Got an error:",error)
       })
-  })
+  })*/

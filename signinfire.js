@@ -1,12 +1,3 @@
-function validateForm() {
-    var username = document.getElementById("thename").value;
-    
-    if(username == "") {
-      alert(" Please type your username");
-      return false;
-     }
-  }
-
   
 var firebaseConfig = {
     apiKey: "AIzaSyDLhtzMjn726JuVFrxLkeSA1Ulxd7Vs7zE",
@@ -21,14 +12,20 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   var db=firebase.firestore();
+ const signin=document.querySelector("#signinForm");
+ signin.addEventListener('submit',function(e){
+   e.preventDefault();
 
-  
-  const userName =document.querySelector("#thename");
+    const userName =document.querySelector("#thename");
   const password= document.querySelector("#firstPassword");
+      var username = document.getElementById("thename").value;
+    
+    if(username == "") {
+      alert(" Please type your username");
+      return false;
+     }
 
-  
-  saveButton.addEventListener("click",function(){
-      const nameToSave=userName.value;
+           const nameToSave=userName.value;
       const passwordToSave=password.value; 
       console.log("I  am going to login "+nameToSave+" to the firestore.");
       db.collection("SIGN-INS").add({
@@ -42,4 +39,15 @@ var firebaseConfig = {
       }).catch(function(error){
           console.log("Got an error",error);
       })
-  });
+             document.querySelector("#signinForm").reset()
+  
+ })
+
+
+
+
+  
+  
+
+  
+  
