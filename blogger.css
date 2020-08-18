@@ -266,3 +266,7 @@ button {
   .signup:hover{
     box-shadow: 2px 3px 6px 3px white;
   }
+  .article{
+    margin-top:100px;
+    margin-left:10px;
+  }
