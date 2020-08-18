@@ -231,13 +231,13 @@ button {
 }
 #div2 {
     height: 700px;
-    background: linear-gradient(rgb(31, 182, 202), rgb(173, 220, 229), rgb(227, 229, 230));
-    width: 300px;
+    background: linear-gradient(rgb(202, 229, 233), rgb(216, 222, 223),white) ;
+    width: 1000px;
     border-radius: 5px;
     box-shadow: 13px 14px 15px white;
     opacity: 1;
     margin-top:100px;
-    margin-left:0px;
+    margin-left:300px;
     text-align:center;
   }
   .h5{
