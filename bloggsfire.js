@@ -11,10 +11,27 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
+  let artilclesList=document.querySelector("#div2");
+
+/*function renderArticle(doc){
+  let li=document.createElement("li");
+  let title=document.createElement("span");
+  let article=document.createElement("span");
+
+  li.setAttribute("data-id",doc.id);
+  title.textContent=doc.data().title;
+  article.textContent=doc.data().article;
+
+  li.appendChild(title);
+  li.appendChild(article)
+
+}*/
+
   var db=firebase.firestore();
     db.collection("Blog").get().then((snapshot)=>{
       snapshot.docs.forEach(doc => {
-        console.log(doc.data())
+        //renderArticle();
+        console.log(doc.data());
       });
       
     })

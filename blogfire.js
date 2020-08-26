@@ -12,13 +12,19 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   var db=firebase.firestore();
 
+  const form=document.querySelector("#blogForm");
+
+
+  form.addEventListener("submit",function(e){
+     e.preventDefault();
+
+     
   const outputHeader=document.querySelector("#articleOut")
   const title =document.querySelector("#title");
   const content= document.querySelector("#content");
-  const save=document.querySelector("#saveButton");
 
-  saveButton.addEventListener("click",function(){
-      const titleToSave=title.value;
+  
+    const titleToSave=title.value;
       const contentToSave=content.value;
        
       console.log("I  am going to save "+titleToSave+" to the firestore.");
@@ -27,7 +33,9 @@ var firebaseConfig = {
           content:contentToSave,
           
       }).then(function(docRef){
-          console.log("status saved!",docRef.id);
+          console.log({title:titleToSave,
+            content:contentToSave,
+            },docRef.id);
       }).catch(function(error){
           console.log("Got an error",error);
       })
