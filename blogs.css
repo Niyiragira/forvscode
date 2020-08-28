@@ -173,7 +173,8 @@ color: #000000;
 }
 body{
     background-repeat:no-repeat;
-    background-size: cover;
+    background-size: infinite;
+    background:rgb(125, 125, 214);
 }
 
 
@@ -184,7 +185,6 @@ position: absolute;
 width: 1350px;
 height: 61px;
 left: 0px;
-top: 839px;
 
 background: #221C1C;
 
@@ -230,15 +230,13 @@ button {
     box-shadow: 2px 3px 6px 3px rgb(73, 25, 136);
 }
 #div2 {
-    height: 700px;
+
     background: linear-gradient(rgb(202, 229, 233), rgb(216, 222, 223),white) ;
-    width: 1000px;
     border-radius: 5px;
     box-shadow: 13px 14px 15px white;
     opacity: 1;
     margin-top:100px;
     margin-left:300px;
-    text-align:center;
   }
   .h5{
     color: #fff;
@@ -258,4 +256,40 @@ button {
   }
   .contacts:hover{
     box-shadow: 2px 3px 6px 3px white;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 10px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.post{
+    width: 90%;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, .6);
+    padding: 2rem;
+}
+
+.post-title{
+    font-size: 3rem;
+    line-height: 2;
+}
+
+.post-content{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+.article{
+    margin-top:100px;
+    margin-left:10px;
   }

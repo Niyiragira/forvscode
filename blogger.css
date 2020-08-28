@@ -185,7 +185,6 @@ position: absolute;
 width: 1350px;
 height: 61px;
 left: 0px;
-top: 839px;
 
 background: #221C1C;
 
@@ -230,7 +229,7 @@ button {
     button:hover {
     box-shadow: 2px 3px 6px 3px rgb(73, 25, 136);
 }
-#div2 {
+#div3 {
     height: 540px;
     background: linear-gradient(rgb(31, 182, 202), rgb(173, 220, 229), rgb(227, 229, 230));
     width: 706px;
